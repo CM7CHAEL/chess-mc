@@ -14,7 +14,7 @@ body {
 
 @media (max-width: 768px) {
   body {
-    width: 150%!important;
+    width: 100%!important;
   }
 }
 
