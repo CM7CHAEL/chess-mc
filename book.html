@@ -1,11 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css.css">
+  <link rel="stylesheet" href="header.css">
+  <link rel="icon" type="image/png" href="assets/images/logo.png" sizes="64x64">
   <title>Libros</title>
 </head>
+
 <body>
-  libros
+  <div style="background: #000; width:100%">
+    <ul class="headerMenu">
+      <a href="index.html"><img class="logo" width="50"
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRrVkn7LkjH8C9Y3hkiQ2GIE07ImNLnfnZHN8YxGt6sXFbcr4UY&usqp=CAU"></a>
+      <li class="linkedin" style="background: url('assets/flecha.png') no-repeat scroll -5px 28px #004870;">
+        <a class="link" href="https://www.linkedin.com/in/cm7chael/" style="color: transparent" target="_blank">
+          <h4>Linkedin</h4>
+        </a>
+      </li>
+      <li class="github" style="background: url('assets/flecha.png') no-repeat scroll -5px 28px #086666;"
+        target="_blank">
+        <a href="https://github.com/CM7CHAEL" style="color: transparent">
+          <h4>Github</h4>
+        </a>
+      </li>
+      <li class="blog" style="background: url('assets/flecha.png') no-repeat scroll -5px 28px #7A007A;" target="_blank">
+        <a href="#" style="color: transparent">
+          <h4>Blog</h4>
+        </a>
+      </li>
+      <li class="home" style="background: url('assets/flecha.png') no-repeat scroll -5px 28px #D16800;" target="_blank">
+        <a href="index.html" style="color: transparent">
+          <h4>Home</h4>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <section id="speakers" class="mt-4">
+    <div class="container">
+      <div class="row">
+        <div>
+          <div id="app">
+            <div class="row">
+              <div class="col-12 col-sm-6 col-md-4 mb-4" v-for="(item, index) in books" :key="index">
+                <div class="card">
+                  <a :href="item.link"><img class="card-img-top" :src="item.img" alt="Ingles" width="50px"
+                      height="120px"></a>
+                  <div class="card-body">
+                    <div class="badges mb-2">
+                      <span class="badge badge-danger">{{item.title}}</span>
+                    </div>
+                    <h5>Fecha: <span> {{item.fecha}}</span></h5>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </body>
+
 </html>
+
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+  integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+  integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="index.js"></script>
+
+<style>
+.home:hover {
+  background: url('/') no-repeat scroll -5px 28px #D16800 !important;
+  opacity: 0.7;
+}
+
+.blog:hover {
+  background: url('/') no-repeat scroll -5px 28px #7A007A !important;
+  opacity: 0.7;
+}
+
+.github:hover {
+  background: url('/') no-repeat scroll -5px 28px #086666 !important;
+  opacity: 0.7;
+}
+
+.linkedin:hover {
+  background: url('/') no-repeat scroll -5px 28px #004870 !important;
+  opacity: 0.7;
+}
+
+.logo {
+  margin-left: 5%;
+  width: 200px;
+  margin-top: -15px;
+  height: 80px;
+}
+
+ul.headerMenu * {
+  font-family: Arial, sans-serif;
+  transition: all 0.2s ease-in-out;
+}
+
+ul.headerMenu {
+  width: 90%;
+  height: 50px;
+  overflow: hidden;
+  background: #000;
+  list-style: none;
+}
+
+ul.headerMenu li {
+  margin-left: 2px;
+  cursor: pointer;
+  float: right;
+  position: relative;
+  width: 15px;
+  padding-bottom: 50px;
+}
+
+ul.headerMenu li h4 {
+  position: relative;
+  top: 0;
+  z-index: 1;
+  margin: 0;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+ul.headerMenu li:hover {
+  width: 160px;
+  background: none;
+}
+
+ul.headerMenu li:hover h4 {
+  top: 10px;
+  padding-left: 5px;
+  color: #fff;
+  background: none;
+}
+
+</style>
