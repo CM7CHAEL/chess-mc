@@ -23,7 +23,7 @@ var app = new Vue({
       {
         img: 'https://images.chesscomfiles.com/uploads/v1/user/21927134.3913d45b.1200x1200o.604a4654b864.jpeg',
         title: 'Perfil de un Ajedrecista',
-        description: 'El ajedrez tiene su origen en la India, más concretamente en el Valle del Indo, y data del siglo VI',
+        description: 'En la actualidad existe una importante investigación psicológica del ajedrez.',
         link: 'https://drive.google.com/file/d/14E1vb1UBCOfRQSZn2wmtwtG3WNse_uhi/view?usp=sharing'
       }
     ],
