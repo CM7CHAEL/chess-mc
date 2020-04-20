@@ -1,93 +1,120 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Freebie: 4 Bootstrap Gallery Templates</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
 </head>
+
 <body>
-  <div class="slide"><div class="slide__label"></div></div>
-  <div class="slide"></div>
-  <div class="slide"></div>
-  <div class="slide"></div>
-  <div class="slide"></div>
-  <div class="slide"></div>
-  <div class="slide"></div>
-  <div class="slide"></div>
-  <div class="slide"></div>
-  <div class="slide"></div>
+  <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top"
+  style="background-color: #000000!important;">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      I ♥ CHESS
+    </a>
+    </div>
+  </div>
+</nav>
+<div id="app">
+  <div class="container gallery-container">
+    <div class="tz-gallery">
+      <div class="row">
+        <div class="col-sm-6 col-md-4" v-for="(item, index) in humor" :key="index">
+          <div class="thumbnail">
+            <a class="lightbox" :href="item">
+              <img :src="item">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
+
 </html>
-
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="index.js"></script>
 <style>
-  html, body { height: 100%; }
+  body {
+    background-image: linear-gradient(to top, #e6e9f0 0%, #eef1f5 100%);
+    min-height: 100vh;
+    font: normal 16px sans-serif;
+  }
 
-body {
-  margin: 0 auto;
-}
+  .gallery-container h1 {
+    text-align: center;
+    margin-top: 70px;
+    font-family: 'Droid Sans', sans-serif;
+    font-weight: bold;
+    color: #58595a;
+  }
 
-.slide {
-  width: 100%;
-  height: 100%;
-  background: white no-repeat center center fixed;
-  background-size: cover;
-  text-align: center;
-  cursor: pointer;;
-  color: white;
-}
+  .gallery-container p.page-description {
+    text-align: center;
+    margin: 30px auto;
+    font-size: 18px;
+    color: #85878c;
+  }
 
-.slide__label {
-  position: absolute;
-  width: 100%;
-  bottom: 0;
-  padding: 32px;
-  font-family: "Helvetica", "Arial", sans;
-  font-weight: 900;
-  font-size: 64px;
-  backdrop-filter: blur(5px);
-}
+  .tz-gallery {
+    padding: 40px;
+  }
 
-.slide:nth-of-type(1) {
-  background-image: url("https://i0.wp.com/vertientecritica.org/wp-content/uploads/2015/04/karl-marx-y-adam-smith-juegan-al-ajedrez.jpg");
-}
+  .tz-gallery .thumbnail {
+    padding: 0;
+    margin-bottom: 30px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: none;
+    transition: 0.15s ease-in-out;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.06);
+  }
 
-.slide:nth-of-type(2) {
-  background-size: contain;
-  background-image: url("https://i.ibb.co/DYKpR7Z/hqdefault.jpg");
-}
+  .tz-gallery .thumbnail:hover {
+    transform: translateY(-10px) scale(1.02);
+  }
 
-.slide:nth-of-type(3) {
-  background-size: contain;
-  background-image: url("https://i.ibb.co/qdhz6p1/chica-quiere-estar-contigo.jpg");
-}
+  .tz-gallery .lightbox img {
+    border-radius: 4px 4px 0 0;
+  }
 
-.slide:nth-of-type(4) {
-  background-size: contain;
-  background-image: url("https://i.ibb.co/dWT2Pjd/unnamed.jpg");
-}
+  .tz-gallery .caption {
+    padding: 26px 30px;
+    text-align: center;
+  }
 
-.slide:nth-of-type(5) {
-  background-size: contain;
-  background-image: url("https://i.ibb.co/W0BBFph/descarga.jpg");
-}
-.slide:nth-of-type(6) {
-  background-size: contain;
-  background-image: url("https://i.ibb.co/3vf66F8/images-2.jpg");
-}
-.slide:nth-of-type(7) {
-  background-size: contain;
-  background-image: url("https://i.ibb.co/447sP9B/images-1.jpg");
-}
-.slide:nth-of-type(8) {
-  background-size: contain;
-  background-image: url("https://i.ibb.co/WKpVwP7/images.jpg");
-}
-.slide:nth-of-type(9) {
-  background-size: contain;
-  background-image: url("https://i.ibb.co/t8khvxq/b5b15b559de228babaf07679bea3b489de36558f-hq.jpg");
-}
-.slide:nth-of-type(10) {
-  background-size: contain;
-  background-image: url("https://i.ibb.co/VQGLyHy/18680194289-945fe594e0-o.jpg");
-}
+  .tz-gallery .caption h3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 0;
+  }
+
+  .tz-gallery .caption p {
+    font-size: 12px;
+    color: #7b7d7d;
+    margin: 0;
+  }
+
+  .baguetteBox-button {
+    background-color: transparent !important;
+  }
+
+  img {
+    width: 323px;
+    height: 200px;
+  }
 </style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
+<script>
+  baguetteBox.run('.tz-gallery');
+</script>
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
