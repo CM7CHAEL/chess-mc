@@ -1,5 +1,5 @@
 var app = new Vue({
-  //https://imgbb.com/
+  //https://imgbb.com/cm7chael
   el: '#app',
   data: {
     books: [{
