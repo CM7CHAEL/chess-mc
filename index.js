@@ -25,6 +25,24 @@ var app = new Vue({
         title: 'Perfil de un Ajedrecista',
         description: 'En la actualidad existe una importante investigación psicológica del ajedrez.',
         link: 'https://drive.google.com/file/d/14E1vb1UBCOfRQSZn2wmtwtG3WNse_uhi/view?usp=sharing'
+      },
+      {
+        img: 'https://www.wikihow.com/images_en/thumb/1/15/Win-Chess-Almost-Every-Time-Step-3-Version-2.jpg/v4-728px-Win-Chess-Almost-Every-Time-Step-3-Version-2.jpg.webp',
+        title: 'Claves para ganar',
+        description: 'Ganar partidas gracias a alguna o celada es el sueño de más de un jugador de ajedrez',
+        link: 'https://drive.google.com/file/d/1mvRM452ye9qYnQ5wS8Tj8mPTcK0DvYNl/view?usp=sharing'
+      },
+      {
+        img: 'https://live.mrf.io/statics/i/ps/www.ecestaticos.com/imagestatic/clipping/fac/b95/facb954bb2cd91a5b851647f4c97af65/como-ganar-una-partida-de-ajedrez-en-solo-dos-jugadas.jpg?mtime=1579565836',
+        title: 'Necesaria técnica',
+        description: 'La Clave es control. Tomar las cosas con calma y dar tiempo al tiempo.',
+        link: 'https://drive.google.com/file/d/1MjcB-h7hx5WsJZh3Yg0xF8iJ9L1Bi4Cl/view?usp=sharing'
+      },
+      {
+        img: 'https://images.chesscomfiles.com/uploads/v1/blog/334772.26479674.668x375o.4dd5857ff62b@2x.jpeg',
+        title: 'Fundamentos del Ajedrez',
+        description: 'Fundamentos del ajedrez por Jose Raul Capablanca',
+        link: 'https://drive.google.com/file/d/1W9hXjqMx4AtYnZrh84ei9ceIJ6Fot0qE/view?usp=sharing'
       }
     ],
     humor: [
